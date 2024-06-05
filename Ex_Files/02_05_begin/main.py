@@ -8,13 +8,14 @@ LOCAL = "local"
 
 current_env = os.environ.get("ENV_NAME", DEVELOPMENT)
 
+intrupution = f"{current_env} environment"
 if current_env == DEVELOPMENT:
-    print("Development environment")
+    print(intrupution)
 elif current_env == PRODUCTION:
-    print("Production environment")
+    print(intrupution)
 elif current_env == STAGING:
-    print("Staging environment")
+    print(intrupution)
 elif current_env in [CODE_SPACE, LOCAL]:
-    print("Codespace or local environment")
+    print(intrupution)
 else:
-    print("Unknown environment")
+    print(intrupution)
